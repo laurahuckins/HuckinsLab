@@ -58,4 +58,10 @@ Formatting author lists is also tricky! Make your life easier by creating an aut
 Last	First	Middle_Initial	Degree	Author_Role	Title	Email	Phone	ORCID	Company_and/or_Institution	Country	Funding_relevant_to_this_manuscript	Acknowledgements_relevant_to_this_publication	Discosures/Competing_Interestes/COI	Author_Contributions (literature search, figures, study design, data collection, data analysis, data interpretation, writing)
 
 
+FAQs:
 
+How do I keep the sections neat in my word document?
+  Use Page-Break at the beginning of each section
+  
+How do I make a single page landscape (eg, for a table)?
+  Set a 'section break' before and after the single page, and then select 'landscape' for that page only
