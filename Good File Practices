@@ -1,0 +1,51 @@
+How to be a good unix/minerva/chimera user!
+
+1. All folders should follow DATA or PROJECT driven organisation, NOT user driven!
+
+EG: your folders should be named accoridng to the type of data or analyses they include. They should sit within the appropriate superfolder.
+So if your PhD is in Anorexia genetics, and you study gwas, twas, and also method development: 
+this is the WRONG way to handle it
+
+Laura_PhD/
+
+Slightly better (but still wrong):
+Laura_PhD/Anorexia/GWAS
+Laura_PhD/Anorexia/TWAS
+Laura_PhD/Anorexia/PRS
+Laura_PhD/Anorexia/scripts
+
+Best of all:
+
+data/Anorexia.plink
+processed_data/GREX/Anorexia
+
+results/GWAS/Anorexia
+results/TWAS/Anorexia
+
+methods/METHOD_NAME
+
+scripts/Anorexia_GWAS
+scripts/Anorexia_TWAS
+
+Each folder you use should include a README file stating who made the files, and in the case of results files, also keep track of input/parameters/output files
+Analyses should include log files where possible.
+
+2. File naming. Keep your file names consistent and easy to understand. Try to include information, while still allowing your files to be used in for-loops and other automated processes if necessary (etc).
+
+To do this:
+
+i. Give each file a 'stem' name. Make this specific and clear. EG: PGCED
+ii. Assign each qc step or analysis step a standardised stem name. Keep these the same between all your analyses if possible. EG: MAF, HWE, LDSC. If you want to add specific details, or more description, separate information with underscores. EG: MAF_gte5 (maf filetr for greater than or equal to 5%); HWE_1e06 (hardy-weinberg equilibirum filter at 1e-06)
+iii. Name files including all qc/analysis steps performed, not just the latest step. Separate steps by periods. EG: PGCED; PGCED.MAF_gte5; PGCED.MAF_gte5.HWE_1e06
+iv. Using the same stem descriptor for all files allows you to cycle through files easily for for-loops etc.
+
+3. Keep files small.
+Almost all files should be gzipped
+syntax: gz $file
+Zipped files can be read into R, python, awk, easily.
+If you use a file less than once/month, consider tar as well:
+tar -czf file file.tar.gz
+
+
+
+
